@@ -1,13 +1,14 @@
 import React from 'react';
 import { Card, Checkbox, Select } from 'antd';
 import { colors } from '../../style/constants';
+import { TypicalFlexDiv } from './style';
 const { Option } = Select;
 
 const Profile = () => {
   return (
     <div style={{ width: '100%' }}>
       <h1>Profile</h1>
-      <div style={{ display: 'flex' }}>
+      <TypicalFlexDiv>
         <Card style={{ width: '60%' }}>
           <div style={{ width: '100%', textAlign: 'center' }}>
             <img
@@ -16,26 +17,27 @@ const Profile = () => {
               style={{ width: 100, height: 100, margin: 30 }}
             />
           </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <TypicalFlexDiv style={{ justifyContent: 'space-between' }}>
             <div>
               <p style={{ margin: 0, color: '#c2c3c4', fontWeight: 'bold' }}>
                 Full name
               </p>
               <p style={{ fontWeight: 'bold' }}>super admin</p>
+              <p style={{ margin: 0, color: '#c2c3c4', fontWeight: 'bold' }}>
+                Email
+              </p>
+              <p style={{ fontWeight: 'bold' }}>super@admin.com</p>
             </div>
             <p style={{ fontWeight: 'bold', color: colors.blue }}>
               Edit Profile
             </p>
-          </div>
-          <p style={{ margin: 0, color: '#c2c3c4', fontWeight: 'bold' }}>
-            Email
-          </p>
-          <p style={{ fontWeight: 'bold' }}>super@admin.com</p>
+          </TypicalFlexDiv>
+
           <hr />
           <p style={{ fontWeight: 'bold', color: colors.blue }}>
             Change Password
           </p>
-          <div style={{ display: 'flex' }}>
+          <TypicalFlexDiv>
             <p
               style={{
                 fontWeight: 'bold',
@@ -49,18 +51,18 @@ const Profile = () => {
               <Option value='english'>English</Option>
               <Option value='chinese'>Chinese</Option>
             </Select>
-          </div>
+          </TypicalFlexDiv>
           <hr />
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <TypicalFlexDiv style={{ justifyContent: 'space-between' }}>
             <p style={{ fontWeight: 'bold', color: colors.blue }}>Logout</p>
             <div style={{ display: 'flex' }}>
               <Checkbox style={{ marginRight: 10 }} />
               <p style={{ fontWeight: 'bold' }}>Logout on all devices</p>
             </div>
-          </div>
+          </TypicalFlexDiv>
         </Card>
         <h2 style={{ marginLeft: 20 }}>Recent likes</h2>
-      </div>
+      </TypicalFlexDiv>
     </div>
   );
 };

@@ -6,10 +6,18 @@ export const Menu = styled(AntMenu)`
   width: 256px;
   background-color: ${colors.main};
   min-height: 100vh;
+
+  @media (max-width: 768px) {
+    width: 100px;
+  }
 `;
 
 export const MenuItem = styled(AntMenu.Item)`
   padding-left: 70px !important;
+
+  @media (max-width: 768px) {
+    padding-left: 10px !important;
+  }
 `;
 
 export const AppLogoContainer = styled.div`
