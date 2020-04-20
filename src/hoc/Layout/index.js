@@ -1,8 +1,14 @@
 import React from 'react';
 import SideMenu from '../../components/SideMenu';
+import Header from '../../components/Header';
 
 const Layout = () => {
-  return <SideMenu />;
+  return (
+    <>
+      <Header />
+      <SideMenu />
+    </>
+  );
 };
 
 export default Layout;
