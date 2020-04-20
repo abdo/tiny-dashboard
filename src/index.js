@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+
 import 'antd/dist/antd.css';
 
+import * as serviceWorker from './serviceWorker';
+import App from './App';
+
+import './index.css';
+import store from './store/createStore';
+
+let app = <App />;
+
+// Hook redux
+app = <Provider store={store}>{app}</Provider>;
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <React.StrictMode>{app}</React.StrictMode>,
   document.getElementById('root'),
 );
 
