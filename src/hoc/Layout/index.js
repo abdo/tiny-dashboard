@@ -12,7 +12,7 @@ const Layout = ({ displayedPage }) => {
       <Header />
       <div style={{ display: 'flex' }}>
         <SideMenu />
-        <div style={{ paddingTop: 50, paddingLeft: 30, width: '100%' }}>
+        <div style={{ paddingTop: 80, paddingLeft: 30, width: '100%' }}>
           {displayedPage === 'profile' ? <Profile /> : <Help />}
         </div>
       </div>
